@@ -11,3 +11,4 @@ faiss-cpu
 #faiss-gpu
 llama-index-embeddings-huggingface
 llama-index-embeddings-instructor
+paho-mqtt==1.6.1
