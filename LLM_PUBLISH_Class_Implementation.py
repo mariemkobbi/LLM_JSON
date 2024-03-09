@@ -34,13 +34,13 @@ time_ex = time.time() - start_time
 Water_Level = levelbassin -(time_ex * 0.7)
         
 """
-class LLM_PUBLISH:
+class DataHandler:
     def __init__(self):
         # MQTT configuration
         self.broker_address = "mqtt.eclipseprojects.io"
         self.topic = "Spirulina_Edge"
 
-        # Credentials for LLM
+        # key for LLM
         self.api_key = os.environ['OPENAI_API_KEY']
 
         # Create MQTT client
@@ -97,10 +97,10 @@ class LLM_PUBLISH:
             time.sleep(5)
 
 # Create and run 
-main = LLM_PUBLISH()
-main.run() """
+handler = DataHandler()
+handler.run() """
 
 while True:
-    main = LLM_PUBLISH()
-    main.process_sensor_data()
+    handler = DataHandler()
+    handler.process_sensor_data()
     time.sleep(5)
